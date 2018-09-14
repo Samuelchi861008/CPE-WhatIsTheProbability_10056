@@ -37,7 +37,7 @@ int main()
             cout << setprecision(4) << fixed 
                 << probability / (1 - pow((1 - probability), numOfPeople)) 
                 << endl;
-        //若非第一人贏，則 機率*(1 - 機率)^(第幾人 - 1) / (1 - (1 - 機率)＾人數)
+        //若非第一人贏，則 機率 * (1 - 機率) ^ (第幾人 - 1) / (1 - (1 - 機率)＾人數)
         else
             cout << setprecision(4) << fixed 
                 << probability * pow((1 - probability), (numOfWin - 1)) / 
