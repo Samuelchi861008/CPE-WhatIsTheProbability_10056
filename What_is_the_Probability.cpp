@@ -32,12 +32,7 @@ int main()
             cout << "0.0000" <<endl; //若機率為0，則直接印出0.0000
             continue;
         }
-        //若求第一個人贏，則 機率 / (1 - (1 - 機率)＾人數) 
-        if(numOfWin == 1)
-            cout << setprecision(4) << fixed 
-                << probability / (1 - pow((1 - probability), numOfPeople)) 
-                << endl;
-        //若非第一人贏，則 機率 * (1 - 機率) ^ (第幾人 - 1) / (1 - (1 - 機率)＾人數)
+        //公式： 機率 * (1 - 機率) ^ (第幾人 - 1) / (1 - (1 - 機率)＾人數)
         else
             cout << setprecision(4) << fixed 
                 << probability * pow((1 - probability), (numOfWin - 1)) / 
